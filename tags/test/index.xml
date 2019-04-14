@@ -2,25 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>test on Fang Yang</title>
-    <link>https://maofangzi.github.io/tags/test/</link>
+    <link>http://bolg.aliveyang.top/tags/test/</link>
     <description>Recent content in test on Fang Yang</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 23 Sep 2018 16:30:37 +0800</lastBuildDate>
     
-	<atom:link href="https://maofangzi.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://bolg.aliveyang.top/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>你好，FY</title>
-      <link>https://maofangzi.github.io/post/welcome/</link>
+      <link>http://bolg.aliveyang.top/post/welcome/</link>
       <pubDate>Sun, 23 Sep 2018 16:30:37 +0800</pubDate>
       
-      <guid>https://maofangzi.github.io/post/welcome/</guid>
-      <description>多发发发打发的范德萨发放
--打的费
-答复
-private  </description>
+      <guid>http://bolg.aliveyang.top/post/welcome/</guid>
+      <description>hugo Hugo是一个用Go编写的静态站点生成器,非常好用（fake）。
+hugo安装 window手动安装 下载的hugo.exe配置全局环境变量
+hugo version  快速安装 macOS使用Homebrew
+brew install hugo  Windows使用Chocolatey
+choco install hugo -confirm  linux使用apt
+sudo apt-get install hugo  1、创建静态站点 hugo new site myblog  2、添加模板 cd myblog cd themes git clone https://github.com/NightFarmer/hugo-theme-yelee.git  3、配置默认模板 myblog 目录下 config.toml 修改
+baseurl = &amp;quot;http://bolg.aliveyang.top/&amp;quot; languageCode = &amp;quot;en-us&amp;quot; title = &amp;quot;Fang Yang&amp;quot; theme = &amp;quot;hugo-theme-yelee&amp;quot;  4、添加文章 该模板文章对应 /myblog/content/post 下面md文件 模板头信息添加
++++ ## Categories = [&amp;quot;Development&amp;quot;, &amp;quot;GoLang&amp;quot;] Description = &amp;quot;&amp;quot; Tags = [&amp;quot;test&amp;quot;] date = &amp;quot;2018-09-23T16:30:37+08:00&amp;quot; menu = &amp;quot;main&amp;quot; title = &amp;quot;你好，FY&amp;quot; +++  5、本地运行 myblog目录下</description>
     </item>
     
   </channel>
