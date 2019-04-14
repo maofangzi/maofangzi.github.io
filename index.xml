@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fang Yang</title>
-    <link>http://bolg.aliveyang.top/</link>
+    <link>http://aliveyang.top/</link>
     <description>Recent content on Fang Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 23 Sep 2018 16:30:37 +0800</lastBuildDate>
     
-	<atom:link href="http://bolg.aliveyang.top/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://aliveyang.top/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>你好，FY</title>
-      <link>http://bolg.aliveyang.top/post/welcome/</link>
+      <link>http://aliveyang.top/post/welcome/</link>
       <pubDate>Sun, 23 Sep 2018 16:30:37 +0800</pubDate>
       
-      <guid>http://bolg.aliveyang.top/post/welcome/</guid>
+      <guid>http://aliveyang.top/post/welcome/</guid>
       <description>hugo Hugo是一个用Go编写的静态站点生成器,非常好用（fake）。
 hugo安装 window手动安装 下载的hugo.exe配置全局环境变量
 hugo version  快速安装 macOS使用Homebrew
