@@ -32,17 +32,19 @@
   </url>
   
   <url>
-    <loc>http://aliveyang.top/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://aliveyang.top/tags/hugo/</loc>
+    <lastmod>2019-06-15T18:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://aliveyang.top/post/2019-04-13-welcome/</loc>
+    <lastmod>2019-06-15T18:12:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://aliveyang.top/categories/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
