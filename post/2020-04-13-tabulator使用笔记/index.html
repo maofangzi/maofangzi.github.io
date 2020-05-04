@@ -18,7 +18,7 @@
         };
     </script>
 
-    <title>我</title>
+    <title>Tabulator使用笔记</title>
     <link rel="icon" href="/favicon.png">
 
     <link rel="stylesheet" href="/css/style.css">
@@ -133,11 +133,11 @@
                         
                             <a href="/tags/git" style="font-size: 12px;" class="color2">Git</a>
                         
-                            <a href="/tags/hugo" style="font-size: 12px;" class="color3">Hugo</a>
+                            <a href="/tags/hugo" style="font-size: 12px;" class="color2">Hugo</a>
                         
-                            <a href="/tags/tabulator" style="font-size: 12px;" class="color3">Tabulator</a>
+                            <a href="/tags/tabulator" style="font-size: 12px;" class="color4">Tabulator</a>
                         
-                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color3">我</a>
+                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color2">我</a>
                         
                     </div>
                 </section>
@@ -211,14 +211,11 @@
 </nav>
 
         <div class="body-wrap">
-            
-            
-            
-            <article id="post-Recycler-pbl" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <article id="post-js-android" class="article article-type-post" itemscope="" itemprop="blogPost">
 
     <div class="article-meta">
-        <a href="http://aliveyang.top/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" class="article-date">
-            <time datetime="2020-04-11 11:12:00 &#43;0800 CST" itemprop="datePublished">2020-04-11</time>
+        <a href="http://aliveyang.top/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="article-date">
+            <time datetime="2020-04-13 08:00:00 &#43;0800 CST" itemprop="datePublished">2020-04-13</time>
         </a>
     </div>
 
@@ -230,21 +227,14 @@
         <header class="article-header">
 
 
-            <h1 itemprop="name">
-                <a class="article-title" href="http://aliveyang.top/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/">感知世界</a>
+            <h1 class="article-title" itemprop="name">
+                <a class="article-title" href="http://aliveyang.top/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">Tabulator使用笔记</a>
             </h1>
 
 
         </header>
 
-
-        <div class="article-entry" itemprop="articleBody">
-            <hr />
-
-<p>我感, 我思</p>
-        </div>
-
-        <div class="article-info article-info-index">
+        <div class="article-info article-info-post">
 
             
 
@@ -253,28 +243,291 @@
                 <ul class="article-tag-list">
                     
                     <li class="article-tag-list-item">
-                        <a class="article-tag-list-link color1" href="/tags/%e6%88%91/"
-                           style="font-size: 12px;">我</a>
+                        <a class="article-tag-list-link color1" href="/tags/tabulator/"
+                           style="font-size: 12px;">Tabulator</a>
                     </li>
                     
                 </ul>
             </div>
             
 
-            <p class="article-more-link">
-                <a href="http://aliveyang.top/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/">more &gt;&gt;</a>
-            </p>
-
             <div class="clearfix"></div>
+        </div>
+
+
+        <div class="article-entry" itemprop="articleBody">
+
+            <hr />
+
+<p>Tabulator使用笔记</p>
+
+<h1 id="tabulator语法笔记">Tabulator语法笔记</h1>
+
+<h2 id="技巧">技巧</h2>
+
+<h3 id="列隐藏">列隐藏</h3>
+
+<pre><code>方式1
+{title:&quot;Name&quot;, field:&quot;name&quot;, visible:false} //create hidden column for the field &quot;name&quot;
+方式2
+table.hideColumn(&quot;name&quot;) //hide the &quot;name&quot; column
+</code></pre>
+
+<h3 id="序号">序号</h3>
+
+<pre><code>{title: &quot;NO&quot;, formatter: &quot;rownum&quot;, align: &quot;center&quot;}
+</code></pre>
+
+<h3 id="分页">分页</h3>
+
+<blockquote>
+<p>远程分页</p>
+</blockquote>
+
+<ul>
+<li>页面设置</li>
+</ul>
+
+<pre><code>var table = new Tabulator('#example-table', {
+// height: 350, //table高度
+headerSort: true, //开启列头排序操作
+ajaxURL: doUrl, // url
+tooltips: true, 
+layout: 'fitDataStretch', //主题
+//ajaxShorting:true,//开启远程排序
+pagination: &quot;remote&quot;, //开启远程分页
+paginationSize: 6, //每页最大数据条
+//paginationSizeSelector:[3, 6, 8, 10],
+//paginationInitialPage:2, //optional parameter to set the initial page to load (远程好像不生效)
+movableColumns: true, //可移动列
+ajaxContentType: 'json', //ajax数据解析格式
+columnHeaderVertAlign: 'centre',//列对齐
+placeholder: &quot;対象データがありません。&quot;,//无数据时展示内容
+ajaxConfig:{ //ajax配置
+   headers: {
+     &quot;X-CSRF-TOKEN&quot;: $(&quot;#token&quot;).val();
+  }
+},
+// ajaxParams: { //额外的请求参数设置
+// }
+//paginationDataSent:{ //用于更改前后交互]参数名称
+//        &quot;page&quot;:&quot;pageNo&quot;, //change page request parameter to &quot;pageNo&quot;
+//},
+columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;applicationBook&quot;, sorter: &quot;string&quot;}]
+});
+</code></pre>
+
+<ul>
+<li>需要返回数据格式</li>
+</ul>
+
+<pre><code>{ page:1,size:3,total_row_count:16,data:[{},{}] }
+</code></pre>
+
+<blockquote>
+<p>本地分页</p>
+</blockquote>
+
+<pre><code>大致内容同上
+//第一步
+ pagination: &quot;local&quot; //设置前端分页
+//设置数据
+ table.setData(data); //格式:[{},{}]
+</code></pre>
+
+<h3 id="选择框">选择框</h3>
+
+<blockquote>
+<p>多选</p>
+</blockquote>
+
+<pre><code>{formatter: 'rowSelection', titleFormatter: 'rowSelection', align: 'center',
+    headerSort: false, sort_flg: false, cellClick: function (e, cell) {
+        'use strict';
+        cell.getRow().toggleSelect();}
+}
+</code></pre>
+
         </div>
 
     </div>
 
+    
+    <nav id="article-nav">
+
+        
+        
+
+        
+        <div id="article-nav-older" class="article-nav-title">
+            <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/">
+                感知世界
+            </a>
+        </div>
+        
+
+    </nav>
+    
+
+
 </article>
 
-            
-            
-            
+<div id="toc" class="toc-article" >
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc">
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#tabulator语法笔记">Tabulator语法笔记</a>
+<ul>
+<li><a href="#技巧">技巧</a>
+<ul>
+<li><a href="#列隐藏">列隐藏</a></li>
+<li><a href="#序号">序号</a></li>
+<li><a href="#分页">分页</a></li>
+<li><a href="#选择框">选择框</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </ol>
+</div>
+<style>
+    
+    .left-col .switch-btn {
+        display: none;
+    }
+
+    .left-col .switch-area {
+        display: none;
+    }
+    
+
+
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录" >
+
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function () {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    
+    
+    
+        
+    
+</script>
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+        <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "24"
+            }, "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="scroll" id="post-nav-button">
+
+    
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    
+
+
+    <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+
+    
+    <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" title="下一篇: 感知世界">
+        <i class="fa fa-angle-right"></i>
+    </a>
+    
+
+</div>
+
+
+<ul class="post-list toc-article">
+    
+    
+    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">Tabulator使用笔记</a></li>
+    
+    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" target="_blank">感知世界</a></li>
+    
+    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-01-git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">git使用笔记</a></li>
+    
+    <li class="post-list-item"><a class="post-list-link" href="/post/2019-04-13-welcome/" target="_blank">你好，FY</a></li>
+    
+</ul>
+
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    $(".post-list").addClass("toc-article");
+    $(".post-list-item a").attr("target", "_blank");
+    $("#post-nav-button > a:nth-child(2)").click(function () {
+        $(".fa-bars, .fa-times").toggle();
+        $(".post-list").toggle(300);
+        if ($(".toc").length > 0) {
+            $("#toc, #tocButton").toggle(200, function () {
+                if ($(".switch-area").is(":visible")) {
+                    $("#toc, .switch-btn, .switch-area").toggle();
+                    $("#tocButton").attr("value", valueHide);
+                }
+            })
+        }
+        else {
+            $(".switch-btn, .switch-area").fadeToggle(300);
+        }
+    })
+</script>
+
+
+<script>
+
+</script>
+
 
         </div>
         <footer id="footer">
@@ -376,4 +629,3 @@
 </div>
 </body>
 </html>
-

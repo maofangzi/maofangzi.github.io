@@ -4,19 +4,30 @@
   
   <url>
     <loc>http://aliveyang.top/</loc>
-    <lastmod>2020-04-11T11:12:00+08:00</lastmod>
+    <lastmod>2020-04-13T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://aliveyang.top/post/</loc>
-    <lastmod>2020-04-11T11:12:00+08:00</lastmod>
+    <lastmod>2020-04-13T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://aliveyang.top/tags/tabulator/</loc>
+    <lastmod>2020-04-13T08:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://aliveyang.top/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-04-13T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://aliveyang.top/tags/</loc>
-    <lastmod>2020-04-11T11:12:00+08:00</lastmod>
+    <lastmod>2020-04-13T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
