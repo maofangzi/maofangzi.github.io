@@ -137,7 +137,7 @@
                         
                             <a href="/tags/tabulator" style="font-size: 12px;" class="color4">Tabulator</a>
                         
-                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color2">我</a>
+                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color4">我</a>
                         
                     </div>
                 </section>
@@ -257,37 +257,25 @@
 
         <div class="article-entry" itemprop="articleBody">
 
-            <hr />
-
+            <hr>
+<h2 id="heading"></h2>
 <p>Tabulator使用笔记</p>
-
 <h1 id="tabulator语法笔记">Tabulator语法笔记</h1>
-
 <h2 id="技巧">技巧</h2>
-
 <h3 id="列隐藏">列隐藏</h3>
-
 <pre><code>方式1
 {title:&quot;Name&quot;, field:&quot;name&quot;, visible:false} //create hidden column for the field &quot;name&quot;
 方式2
 table.hideColumn(&quot;name&quot;) //hide the &quot;name&quot; column
-</code></pre>
-
-<h3 id="序号">序号</h3>
-
+</code></pre><h3 id="序号">序号</h3>
 <pre><code>{title: &quot;NO&quot;, formatter: &quot;rownum&quot;, align: &quot;center&quot;}
-</code></pre>
-
-<h3 id="分页">分页</h3>
-
+</code></pre><h3 id="分页">分页</h3>
 <blockquote>
 <p>远程分页</p>
 </blockquote>
-
 <ul>
 <li>页面设置</li>
 </ul>
-
 <pre><code>var table = new Tabulator('#example-table', {
 // height: 350, //table高度
 headerSort: true, //开启列头排序操作
@@ -315,32 +303,22 @@ ajaxConfig:{ //ajax配置
 //},
 columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;applicationBook&quot;, sorter: &quot;string&quot;}]
 });
-</code></pre>
-
-<ul>
+</code></pre><ul>
 <li>需要返回数据格式</li>
 </ul>
-
 <pre><code>{ page:1,size:3,total_row_count:16,data:[{},{}] }
-</code></pre>
-
-<blockquote>
+</code></pre><blockquote>
 <p>本地分页</p>
 </blockquote>
-
 <pre><code>大致内容同上
 //第一步
  pagination: &quot;local&quot; //设置前端分页
 //设置数据
  table.setData(data); //格式:[{},{}]
-</code></pre>
-
-<h3 id="选择框">选择框</h3>
-
+</code></pre><h3 id="选择框">选择框</h3>
 <blockquote>
 <p>多选</p>
 </blockquote>
-
 <pre><code>{formatter: 'rowSelection', titleFormatter: 'rowSelection', align: 'center',
     headerSort: false, sort_flg: false, cellClick: function (e, cell) {
         'use strict';
@@ -360,8 +338,8 @@ columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;a
 
         
         <div id="article-nav-older" class="article-nav-title">
-            <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/">
-                感知世界
+            <a href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/">
+                记忆碎片
             </a>
         </div>
         
@@ -376,18 +354,20 @@ columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;a
     <strong class="toc-title">文章目录</strong>
     <ol class="toc">
         <nav id="TableOfContents">
-<ul>
-<li><a href="#tabulator语法笔记">Tabulator语法笔记</a>
-<ul>
-<li><a href="#技巧">技巧</a>
-<ul>
-<li><a href="#列隐藏">列隐藏</a></li>
-<li><a href="#序号">序号</a></li>
-<li><a href="#分页">分页</a></li>
-<li><a href="#选择框">选择框</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading"></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#技巧">技巧</a>
+      <ul>
+        <li><a href="#列隐藏">列隐藏</a></li>
+        <li><a href="#序号">序号</a></li>
+        <li><a href="#分页">分页</a></li>
+        <li><a href="#选择框">选择框</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </ol>
 </div>
@@ -481,7 +461,7 @@ columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;a
 
 
     
-    <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" title="下一篇: 感知世界">
+    <a href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/" title="下一篇: 记忆碎片">
         <i class="fa fa-angle-right"></i>
     </a>
     
@@ -494,7 +474,7 @@ columns: columnsInit //列初始化 [{title:&quot;申请书&quot;, field:&quot;a
     
     <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">Tabulator使用笔记</a></li>
     
-    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" target="_blank">感知世界</a></li>
+    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/" target="_blank">记忆碎片</a></li>
     
     <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-01-git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">git使用笔记</a></li>
     

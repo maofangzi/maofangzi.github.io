@@ -131,13 +131,13 @@
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
                         
-                            <a href="/tags/git" style="font-size: 12px;" class="color3">Git</a>
+                            <a href="/tags/git" style="font-size: 12px;" class="color1">Git</a>
                         
-                            <a href="/tags/hugo" style="font-size: 12px;" class="color2">Hugo</a>
+                            <a href="/tags/hugo" style="font-size: 12px;" class="color3">Hugo</a>
                         
                             <a href="/tags/tabulator" style="font-size: 12px;" class="color3">Tabulator</a>
                         
-                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color1">我</a>
+                            <a href="/tags/%E6%88%91" style="font-size: 12px;" class="color3">我</a>
                         
                     </div>
                 </section>
@@ -257,12 +257,9 @@
 
         <div class="article-entry" itemprop="articleBody">
 
-            <hr />
-
+            <hr>
 <p>git使用笔记(再补)</p>
-
 <h2 id="初始篇">初始篇</h2>
-
 <pre><code>//此法没用过(适用于现有本地再有远程)
 git init
 git remote add origin git@github.com:michaelliao/learngit.git
@@ -271,10 +268,7 @@ git clone https://github.com/aliveyang/my-alive.git
 //本地仓库配置使用人及邮件
 git config --global user.name = &quot;aliveyang&quot;
 git config --global user.email = &quot;daybreakfangyang@gmail.com&quot;
-</code></pre>
-
-<h2 id="提交篇">提交篇</h2>
-
+</code></pre><h2 id="提交篇">提交篇</h2>
 <pre><code>//添加预备到本地仓库
 git add ReadMe.md
 git add readMe2.md readMe3.txt
@@ -285,10 +279,7 @@ git commit -m &quot;这是提交信息说明&quot;
 git push -u origin master
 //推送到本地分支与之追踪关联的远程分支, 如果不存在, 则创建
 git push
-</code></pre>
-
-<h2 id="分支篇">分支篇</h2>
-
+</code></pre><h2 id="分支篇">分支篇</h2>
 <pre><code>//查看本地分支
 git branch
 //查看远程分支
@@ -303,10 +294,7 @@ git checkout -b dev   //新版采用 git switch -c dev
 git merge dev1
 //删除分支
 git branch -d dev1
-</code></pre>
-
-<h2 id="冲突篇">冲突篇</h2>
-
+</code></pre><h2 id="冲突篇">冲突篇</h2>
 <pre><code>//1. 备份本地分支内容
 git stash
 //2. 拉取远程分支内容
@@ -314,24 +302,15 @@ git pull
 //3. 恢复最近一次本地分支备份内容
 git stash pop
 //4. 根据文件内提示解决冲突 
-</code></pre>
-
-<h2 id="版本篇">版本篇</h2>
-
+</code></pre><h2 id="版本篇">版本篇</h2>
 <pre><code>//查看历史记录
 git log
 //切换版本(注意保持本地分支内容)
 git reset --hard &quot;[HEAD]版本号&quot;
-</code></pre>
-
-<h2 id="进阶篇">进阶篇</h2>
-
+</code></pre><h2 id="进阶篇">进阶篇</h2>
 <h3 id="提交进阶">提交进阶</h3>
-
 <h3 id="分支进阶">分支进阶</h3>
-
 <h3 id="冲突进阶">冲突进阶</h3>
-
 <pre><code>//显示所有本地备份(git备份方式为:栈)
 git stash list 
 //清空备份
@@ -347,8 +326,8 @@ git stash clear
 
         
         <div id="article-nav-newer" class="article-nav-title">
-            <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/">
-                感知世界
+            <a href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/">
+                记忆碎片
             </a>
         </div>
         
@@ -371,22 +350,20 @@ git stash clear
     <strong class="toc-title">文章目录</strong>
     <ol class="toc">
         <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#初始篇">初始篇</a></li>
-<li><a href="#提交篇">提交篇</a></li>
-<li><a href="#分支篇">分支篇</a></li>
-<li><a href="#冲突篇">冲突篇</a></li>
-<li><a href="#版本篇">版本篇</a></li>
-<li><a href="#进阶篇">进阶篇</a>
-<ul>
-<li><a href="#提交进阶">提交进阶</a></li>
-<li><a href="#分支进阶">分支进阶</a></li>
-<li><a href="#冲突进阶">冲突进阶</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#初始篇">初始篇</a></li>
+    <li><a href="#提交篇">提交篇</a></li>
+    <li><a href="#分支篇">分支篇</a></li>
+    <li><a href="#冲突篇">冲突篇</a></li>
+    <li><a href="#版本篇">版本篇</a></li>
+    <li><a href="#进阶篇">进阶篇</a>
+      <ul>
+        <li><a href="#提交进阶">提交进阶</a></li>
+        <li><a href="#分支进阶">分支进阶</a></li>
+        <li><a href="#冲突进阶">冲突进阶</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </ol>
 </div>
@@ -472,7 +449,7 @@ git stash clear
 <div class="scroll" id="post-nav-button">
 
     
-    <a href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" title="上一篇: 感知世界">
+    <a href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/" title="上一篇: 记忆碎片">
         <i class="fa fa-angle-left"></i>
     </a>
     
@@ -495,7 +472,7 @@ git stash clear
     
     <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">Tabulator使用笔记</a></li>
     
-    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/" target="_blank">感知世界</a></li>
+    <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/" target="_blank">记忆碎片</a></li>
     
     <li class="post-list-item"><a class="post-list-link" href="/post/2020-04-01-git%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_blank">git使用笔记</a></li>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Fang Yang</title>
@@ -17,8 +17,7 @@
       <pubDate>Sat, 15 Jun 2019 18:12:00 +0800</pubDate>
       
       <guid>http://aliveyang.top/post/2019-04-13-welcome/</guid>
-      <description>&lt;hr /&gt;
-
+      <description>&lt;hr&gt;
 &lt;p&gt;这是一个关于hugo搭建博客的介绍&lt;/p&gt;</description>
     </item>
     

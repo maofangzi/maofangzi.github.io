@@ -1,23 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://aliveyang.top/</loc>
     <lastmod>2020-04-13T08:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://aliveyang.top/post/</loc>
     <lastmod>2020-04-13T08:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://aliveyang.top/tags/tabulator/</loc>
     <lastmod>2020-04-13T08:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -28,24 +25,21 @@
   <url>
     <loc>http://aliveyang.top/tags/</loc>
     <lastmod>2020-04-13T08:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://aliveyang.top/post/2020-04-11-%E6%84%9F%E7%9F%A5%E4%B8%96%E7%95%8C/</loc>
-    <lastmod>2020-04-11T11:12:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://aliveyang.top/tags/%E6%88%91/</loc>
     <lastmod>2020-04-11T11:12:00+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://aliveyang.top/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/</loc>
+    <lastmod>2020-04-11T11:12:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://aliveyang.top/tags/git/</loc>
     <lastmod>2020-04-04T18:12:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -56,7 +50,6 @@
   <url>
     <loc>http://aliveyang.top/tags/hugo/</loc>
     <lastmod>2019-06-15T18:12:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -66,7 +59,6 @@
   
   <url>
     <loc>http://aliveyang.top/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
