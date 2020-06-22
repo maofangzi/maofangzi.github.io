@@ -18,7 +18,6 @@
       
       <guid>http://aliveyang.top/post/2020-04-13-tabulator%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 &lt;p&gt;Tabulator使用笔记&lt;/p&gt;</description>
     </item>
     
@@ -29,7 +28,6 @@
       
       <guid>http://aliveyang.top/post/2020-04-11-%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/</guid>
       <description>&lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 &lt;p&gt;我感&lt;/p&gt;</description>
     </item>
     
@@ -45,10 +43,10 @@
     
     <item>
       <title>你好，FY</title>
-      <link>http://aliveyang.top/post/2019-04-13-welcome/</link>
+      <link>http://aliveyang.top/post/2019-04-13-hugo%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sat, 15 Jun 2019 18:12:00 +0800</pubDate>
       
-      <guid>http://aliveyang.top/post/2019-04-13-welcome/</guid>
+      <guid>http://aliveyang.top/post/2019-04-13-hugo%E4%BD%BF%E7%94%A8/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;这是一个关于hugo搭建博客的介绍&lt;/p&gt;</description>
     </item>
